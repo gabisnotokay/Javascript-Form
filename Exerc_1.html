@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Exercício 1</title><meta charset="UTF-8">
+
+        <center><h3>Exercício Um</h3>
+
+            Digite suas quatro notas (0 a 10) e seu nome para saber sua Média Aritimética (MA).<br><br> 
+
+        </center>
+
+        <style>
+
+        body {
+            background-color: rgb(133, 215, 247);
+
+        }
+        </style>
+    </head>
+
+<script language="Javascript">
+
+    function verificar()
+    {   
+        var NOME = (document.form.var1.value);
+        var N1 = eval(document.form.var2.value);
+        var N2 = eval(document.form.var3.value);
+        var N3 = eval(document.form.var4.value);
+        var N4 = eval(document.form.var5.value);
+        var MA;
+
+        MA = (N1+N2+N3+N4)/4;
+
+    if(MA < 3)
+        {
+            alert(NOME+", infelizmente, você foi retido.");
+        } 
+            if (MA >= 3 && MA < 6) 
+            {
+                alert(NOME+", você terá que realizar um exame para saber sua classificação."); 
+            }
+                if (MA >= 6)
+                {
+                    alert(NOME+", parabéns, você foi aprovado(a)!!"); 
+                }
+    }            
+                
+    </script>
+    
+    <body>
+    <center> <form name="form">
+
+    Nome: <input type="text" name="var1" size="15" maxlength="4">
+    <br><br>
+    1° Nota <input type="text" name="var2" size="15" maxlength="4">
+    <br><br>
+    2° Nota <input type="text" name="var3" size="15" maxlength="4">
+    <br><br>
+    3° Nota <input type="text" name="var4" size="15" maxlength="4">
+    <br><br>
+    4° Nota <input type="text" name="var5" size="15" maxlength="4">
+    <br><br>
+    <input type="button" name="bt1" value="Verificar" onclick="verificar()">
+    &nbsp;&nbsp;
+    <input type="reset" name="bt2" value="Limpar" onclick="document.form.var1.focus()">
+    &nbsp;&nbsp;
+    <input type="button" name="bt3" value="Fechar" onclick="window.close()">
+    </center>
+        </form>
+    </body>
+</html>
